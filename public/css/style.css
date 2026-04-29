@@ -26,3 +26,27 @@ h1{
     box-shadow: 0 2px 5px lightgray;
 
 }
+
+h3{
+    margin-left: 5px;
+    color: deeppink;
+}
+
+p{
+    margin: 5px 0;
+    color: gray;
+}
+
+.description p{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: mistyrose;
+    border-radius: 5px;
+    color: maroon;
+}
+
+.idea:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
