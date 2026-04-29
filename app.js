@@ -42,8 +42,8 @@ async function main() {
 
 // index route
 app.get("/ideas",async(req,res)=>{
-    let idea=await Idea.find();
-    res.render("home.ejs",{idea});
+    let ideas=await Idea.find();
+    res.render("home.ejs",{ideas});
 });
 
 
