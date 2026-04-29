@@ -22,15 +22,6 @@ const ideaSchema=new mongoose.Schema({
         type:Number,
         default:0,
     },
-    comments:[{
-        text:{
-            type:String,
-            required:true,
-        },
-        author:{
-            type:String,
-        }    
-    }],
 });
 
 const idea= mongoose.model("idea",ideaSchema);

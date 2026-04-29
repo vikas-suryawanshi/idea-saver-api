@@ -2,6 +2,7 @@ const express=require("express");
 const port=8080;
 const app=express();
 const mongoose=require("mongoose");
+const { create } = require("./models/idea");
 const Idea=reuire("./models/idea.js");
 
 
@@ -19,7 +20,19 @@ async function main() {
 }
 
 // initalize one 
-idea1=
+idea1=new Idea({
+    author:"vikas",
+    title:"ai interview platform",
+    description:"it is require to indian students",
+    likes:80,
+
+});
+
+idea1.save().then((data)=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+})
 
 app.get("/",(req,res)=>{
     res.send("server is working");
