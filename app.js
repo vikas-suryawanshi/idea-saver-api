@@ -46,6 +46,11 @@ app.get("/ideas",async(req,res)=>{
     res.render("home.ejs",{ideas});
 });
 
+// new get route
+app.get("/ideas/new",(req,res)=>{
+    res.render("new.ejs");
+})
+
 
 app.get("/",(req,res)=>{
     res.send("server is working");
