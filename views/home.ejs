@@ -9,7 +9,7 @@
 <body>
     <h1>All ideas</h1>
 
-    <form method="get" action="/ideas/new">Create New Idea</form>
+    <form method="get" action="/ideas/new"><button>Create New Idea</button></form>
     <%for(let idea of ideas){%>
         <div class="idea">
             <h3>Author: <b><%= idea.author%></b></h3>
