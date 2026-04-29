@@ -39,6 +39,14 @@ async function main() {
 //     console.log(err);
 // })
 
+
+// index route
+app.get("/ideas",async(req,res)=>{
+    let idea=await Idea.find();
+    res.render("home.ejs",{idea});
+});
+
+
 app.get("/",(req,res)=>{
     res.send("server is working");
 })
