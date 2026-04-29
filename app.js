@@ -4,6 +4,11 @@ const app=express();
 const mongoose=require("mongoose");
 const { create } = require("./models/idea");
 const Idea=require("./models/idea.js");
+const path=require("path")
+app.set("view engine","ejs");
+app.set("views",path.join(__dirname,"views"));
+app.use(express.static(path.join(__dirname,"public")));
+app.use(express.urlencoded({extended:true}));
 
 
 
