@@ -77,6 +77,13 @@ app.get("/ideas/:id",async(req,res)=>{
 
 })
 
+// edit route for serve form
+app.get("/ideas/:id/edit",async(req,res)=>{
+    let {id}=req.params;
+    let idea= await Idea.findById(id);
+    res.render("edit.ejs",{idea});
+})
+
 
 app.get("/",(req,res)=>{
     res.send("server is working");
