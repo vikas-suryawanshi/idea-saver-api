@@ -50,3 +50,10 @@ p{
   transform: scale(1.01);
   transition: 0.2s;
 }
+
+/* home page button style */
+.button{
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
