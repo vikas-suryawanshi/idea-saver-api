@@ -51,6 +51,23 @@ app.get("/ideas/new",(req,res)=>{
     res.render("new.ejs");
 })
 
+// post route for add
+app.post("/ideas",(req,res)=>{
+    let {author,title,description}=req.body;
+    let idea=new Idea({
+        author:author,
+        title:title,
+        description:description,
+        createdAt:Date.now(),
+    });
+    idea.save().then((data)=>{
+        console.log(data);
+    }).catch((err)=>{
+        console.log(err);
+})
+res.redirect("/ideas");
+})
+
 
 app.get("/",(req,res)=>{
     res.send("server is working");
