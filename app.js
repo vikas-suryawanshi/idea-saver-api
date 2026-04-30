@@ -96,6 +96,13 @@ app.put("/ideas/:id",async(req,res)=>{
 })
 
 
+// delete for delete a idea
+app.delete("/ideas/:id",async(req,res)=>{
+    let {id}=req.params;
+    let idea= await Idea.findByIdAndDelete(id);
+    res.redirect("/ideas");
+})
+
 app.get("/",(req,res)=>{
     res.send("server is working");
 })
