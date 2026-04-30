@@ -85,6 +85,16 @@ app.get("/ideas/:id/edit",async(req,res)=>{
 })
 
 
+// update route for update description
+app.put("/ideas/:id",async(req,res)=>{
+    let {id}=req.params;
+    let {description:newdescription}=req.body;
+    let idea=await Idea.findByIdAndUpdate(id,{description:newdescription})
+    console.log(description);
+    res.redirect("/ideas");
+})
+
+
 app.get("/",(req,res)=>{
     res.send("server is working");
 })
