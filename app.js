@@ -69,6 +69,15 @@ res.redirect("/ideas");
 })
 
 
+// show route 
+app.get("/ideas/:id",async(req,res)=>{
+    let {id}=req.params;
+    let idea=await Idea.findById(id);
+    res.render("show.ejs",{idea});
+
+})
+
+
 app.get("/",(req,res)=>{
     res.send("server is working");
 })
