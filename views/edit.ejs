@@ -10,11 +10,9 @@
         <form>
             <h3>Edit your info: <b><%= idea.author%></b></h3>
             <br/>
-            <label for="title">Title:</label>
-            <textarea name="title" id="title"><%= idea.title%></textarea>
+            <p>Title: <%= idea.title%></p>
             <br/>
-            <label for="description">Description:</label>
-            <textarea name="title" id="description"><%= idea.description%></textarea>
+            <textarea name="title" id="description" rows="8" cols="15"><%= idea.description%></textarea>
         </form>
     </div>
 </body>
