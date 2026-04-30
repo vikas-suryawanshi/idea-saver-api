@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show info</title>
+</head>
+<body>
+    <h1>Show your info</h1>
+        <div class="idea">
+            <h3>Author: <b><%= idea.author%></b></h3>
+            <p>title: <b><%= idea.title%></b></p>
+            <div class="description">
+                <p>idea: <%= idea.description%></p>
+            </div>
+        </div>
+        <form method="get" action="/ideas/<%= idea._id%>"><button>Show</button></form>
+</body>
+</html>
