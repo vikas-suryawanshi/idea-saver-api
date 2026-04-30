@@ -91,8 +91,7 @@ app.get("/ideas/:id/edit",async(req,res)=>{
 app.put("/ideas/:id",async(req,res)=>{
     let {id}=req.params;
     let {description:newdescription}=req.body;
-    let idea=await Idea.findByIdAndUpdate(id,{description:newdescription})
-    console.log(description);
+    let idea=await Idea.findByIdAndUpdate(id,{description:newdescription});
     res.redirect("/ideas");
 })
 

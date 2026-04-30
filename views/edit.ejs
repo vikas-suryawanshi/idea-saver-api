@@ -7,17 +7,15 @@
 </head>
 <body>
     <div class="edit">
-        <form>
+        <form method="post" action="/ideas/<%=idea._id%>?_method=put">
             <h3>Edit your info: <b><%= idea.author%></b></h3>
             <br/>
             <p>Title: <%= idea.title%></p>
             <br/>
-            <textarea name="title" id="description" rows="8" cols="15"><%= idea.description%></textarea>
+            <textarea name="description" id="description" rows="8" cols="15"><%= idea.description%></textarea>
             <br/>
             <br/>
-            <form method="post" action="/ideas/<%=idea._id%>?_method=put">
                 <button>Update</button>
-            </form>
         </form>
     </div>
 </body>
