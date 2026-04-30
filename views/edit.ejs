@@ -13,6 +13,11 @@
             <p>Title: <%= idea.title%></p>
             <br/>
             <textarea name="title" id="description" rows="8" cols="15"><%= idea.description%></textarea>
+            <br/>
+            <br/>
+            <form method="post" action="/ideas/<%=idea._id%>?_method=put">
+                <button>Update</button>
+            </form>
         </form>
     </div>
 </body>
