@@ -16,6 +16,16 @@ body{
 }
 
 
+/* create button */
+.create-btn{
+    padding: 8px 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 
 /* all headings h1 style */
 
