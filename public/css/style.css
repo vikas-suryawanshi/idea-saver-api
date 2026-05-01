@@ -54,6 +54,26 @@ button{
     font-size: 13px;
     font-weight: 500;
 }
+
+
+/* show button */
+.btn-show{
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+
+/* edit button */
+.btn-edit{
+    background: #f0fff4;
+    color: #276749;
+}
+
+
+/* delete btn */
+.btn-delete{
+    background: #fff5f5;
+    color: #c53030;
+}
 /* h3{
     margin-left: 5px;
     color: deeppink;
