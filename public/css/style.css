@@ -74,15 +74,36 @@ button{
     color: #c53030;
 }
 
+/* Author line */
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #718096;
+    margin-bottom: 4px;
+}
 
-/* h3{
-    margin-left: 5px;
-    color: deeppink;
-} */
+h3 b {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 17px;
+}
 
-/* p{
-    margin: 5px 0;
-    color: gray;
+/* Title line */
+title p{
+    font-size: 13px;
+    color: #718096;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+.title p b {
+    color: #1a202c;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 } */
 
 /* .idea:hover {
