@@ -55,8 +55,7 @@ button{
     font-weight: 500;
 }
 
-
-/* show button */
+/* /* show button */
 .btn-show{
     background: #ebf8ff;
     color: #2b6cb0;
@@ -74,6 +73,8 @@ button{
     background: #fff5f5;
     color: #c53030;
 }
+
+
 /* h3{
     margin-left: 5px;
     color: deeppink;

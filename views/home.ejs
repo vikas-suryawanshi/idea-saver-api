@@ -18,9 +18,9 @@
                 <p>idea: <%= idea.description%></p>
             </div>
             <div class="button">
-                <form method="get" action="/ideas/<%= idea._id%>" class="btn-show"><button>Show</button></form>
-                <form method="get" action="/ideas/<%= idea._id%>/edit" class="btn-edit"><button>edit</button></form>
-                <form method="post" action="/ideas/<%= idea._id%>?_method=delete" class="btn-delete"><button>delete</button></form>
+                <form method="get" action="/ideas/<%= idea._id%>"><button class="btn-show">Show</button></form>
+                <form method="get" action="/ideas/<%= idea._id%>/edit"><button class="btn-edit">edit</button></form>
+                <form method="post" action="/ideas/<%= idea._id%>?_method=delete"><button class="btn-delete">delete</button></form>
             </div>
         </div>
     <%}%>
