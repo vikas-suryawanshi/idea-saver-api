@@ -10,6 +10,7 @@ body{
 /* all headings h1 style */
 
 h1{
+    text-align: center;
     color: #1a202c;
     border-radius: 8px; /*dark text*/
     margin-bottom: 20px ;
@@ -21,14 +22,14 @@ h1{
 .idea{
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     padding: 16px 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px lightgray;
 
 }
 
-
+/* descrpition style */
 .description {
     background: #f7fafc;
     border-left: 3px solid #90cdf4;
@@ -37,7 +38,7 @@ h1{
     border-radius: 4px;
 }
 
-
+/* opacity */
 .description b{
     opacity: 0.65;
 }
