@@ -15,7 +15,7 @@
             <h3>Author: <b><%= idea.author%></b></h3>
             <p class="idea-title">Title: <b><%= idea.title%></b></p>
             <div class="description">
-                <p>idea: <%= idea.description%></p>
+                <p><b>description:</b> <%= idea.description%></p>
             </div>
             <div class="button">
                 <form method="get" action="/ideas/<%= idea._id%>"><button class="btn-show">Show</button></form>
