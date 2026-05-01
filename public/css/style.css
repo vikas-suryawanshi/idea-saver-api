@@ -1,22 +1,23 @@
-/* whole page */
+/* /* whole page */
 body{
-    font-family: Arial, sans-serif;
-    background-color: lavenderblush;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa; /*light gray */
+    padding: 2rem;
 
 }
+
+
+/* all headings h1 style */
 
 h1{
-    color: indigo;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px auto;
-    font-size: 32px;
-    letter-spacing: 1px;
-
+    color: #1a202c;
+    border-radius: 8px; /*dark text*/
+    margin-bottom: 20px ;
+    font-size: 28px;
 }
 
 
+/* idea card  */
 .idea{
     background-color: #ffffff;
     border-left: 5px solid hotpink;
@@ -27,33 +28,33 @@ h1{
 
 }
 
-h3{
+/* h3{
     margin-left: 5px;
     color: deeppink;
-}
+} */
 
-p{
+/* p{
     margin: 5px 0;
     color: gray;
-}
+} */
 
-.description p{
+/* .description p{
     display: inline-block;
     margin-top: 15px;
     padding: 10px;
     background-color: mistyrose;
     border-radius: 5px;
     color: maroon;
-}
+} */
 
-.idea:hover {
+/* .idea:hover {
   transform: scale(1.01);
   transition: 0.2s;
-}
+} */
 
 /* home page button style */
-.button{
+/* .button{
     display: flex;
     gap: 10px;
     margin-left: 20px;
-}
+} */ */
