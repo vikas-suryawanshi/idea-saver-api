@@ -1,4 +1,5 @@
 .new{
+    text-align: right;
     width: 40%;
     margin: 40px auto;
     background-color: white;
@@ -15,6 +16,7 @@
 
 
 input, textarea {
+    text-align: start;
     width: 90%;
     padding: 10px;
     margin-left: 10px;
@@ -23,4 +25,20 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+}
+
+/* textarea  */
+textarea{
+    resize: none;
+}
+
+.new button{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
