@@ -1,5 +1,9 @@
 /* whole page */
 .edit{
     width: 50%;
-    margin: 40px auto;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
