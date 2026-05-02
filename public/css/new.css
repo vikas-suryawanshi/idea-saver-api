@@ -6,3 +6,9 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
+.new h3{
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
