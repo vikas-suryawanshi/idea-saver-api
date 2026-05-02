@@ -42,3 +42,7 @@ textarea{
     border-radius: 6px;
     cursor: pointer;
 }
+
+.new button:hover{
+    background-color: deeppink;
+}
