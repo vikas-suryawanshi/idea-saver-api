@@ -10,10 +10,9 @@
     <div class="edit">
         <form method="post" action="/ideas/<%=idea._id%>?_method=put">
             <h3>Edit your info: <b><%= idea.author%></b></h3>
+            <p><strong>Title:</strong> <%= idea.title%></p>
             <br/>
-            <p>Title: <%= idea.title%></p>
-            <br/>
-            <textarea name="description" id="description" rows="8" cols="15"><%= idea.description%></textarea>
+            <textarea name="description" id="description" rows="6"><%= idea.description%></textarea>
             <br/>
             <br/>
                 <button>Update</button>
