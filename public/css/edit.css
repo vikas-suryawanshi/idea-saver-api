@@ -29,3 +29,12 @@ textarea{
     border: 1px solid #ccc;
     font-size: 14px;
 }
+
+.edit button{
+    background-color: #2196f3;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
