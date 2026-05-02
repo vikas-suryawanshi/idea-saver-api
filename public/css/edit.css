@@ -1,5 +1,6 @@
 /* whole page */
 .edit{
+    text-align: right;
     width: 50%;
     margin: 50px auto;
     background-color: white;
