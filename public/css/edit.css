@@ -38,3 +38,7 @@ textarea{
     border-radius: 6px;
     cursor: pointer;
 }
+
+.edit button:hover{
+    background-color: #1976d2;
+}
