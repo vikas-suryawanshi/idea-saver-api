@@ -9,6 +9,23 @@
 }
 
 .edit h3{
+    text-align: center;
     color: #6a1b9a;
     margin-bottom: 10px;
+}
+
+.edit p{
+    text-align: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+textarea{
+    /* text-align: center; */
+    margin-right: 5px;
+    width: 92%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
