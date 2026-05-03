@@ -181,16 +181,10 @@ textarea{
 
 /* EDIT BUTTON */
 .edit button{
-    background-color: #2196f3;
     border: none;
-    color: white;
     padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
-}
-
-.edit button:hover{
-    background-color: #1976d2;
 }
 
 /* SHOW PAGE */
