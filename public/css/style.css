@@ -107,21 +107,6 @@ h3 b{
     box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-.show-btn{
-    background: #e3f2fd;
-    color: #1976d2;
-}
-
-.edit-btn{
-    background: #e8f5e9;
-    color: #2e7d32;
-}
-
-.delete-btn{
-    background: #ffebee;
-    color: #c62828;
-}
-
 /* FORM (NEW + EDIT COMMON) */
 .new, .edit{
     width: 45%;
