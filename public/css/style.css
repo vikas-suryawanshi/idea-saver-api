@@ -168,15 +168,13 @@ textarea{
     display: block;
     margin: 0 auto;
     padding: 8px 16px;
-    background-color: hotpink;
-    color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .new button:hover{
-    background-color: deeppink;
+    background-color: darkgreen;
 }
 
 /* EDIT BUTTON */
