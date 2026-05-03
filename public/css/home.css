@@ -75,9 +75,9 @@ body{
 }
 
 /* /* show button */
-.btn-show{
-    background: #ebf8ff;
-    color: #2b6cb0;
+.show-btn{
+    background: #e3f2fd;
+    color: #1976d2;
 }
 
 /* edit button */
