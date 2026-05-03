@@ -94,6 +94,10 @@ body{
 }
 
 /* hover btn effect */
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 
 /* Author line */
 h3 {
