@@ -19,6 +19,12 @@ body{
 }
 
 
+h1{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 28px;
+}    
 
 /* descrpition style */
 .description {
