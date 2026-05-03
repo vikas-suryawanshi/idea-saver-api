@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Info</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+<% layout("/layouts/boilerplate.ejs") %>
     <div class="edit">
         <form method="post" action="/ideas/<%=idea._id%>?_method=put">
             <h3>Edit your info: <b><%= idea.author%></b></h3>
@@ -18,5 +10,3 @@
                 <button>Update</button>
         </form>
     </div>
-</body>
-</html>
