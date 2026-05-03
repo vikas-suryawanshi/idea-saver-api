@@ -21,9 +21,9 @@
                 <p><b>description:</b> <%= idea.description%></p>
             </div>
             <div class="button">
-                <form method="get" action="/ideas/<%= idea._id%>"><button class="btn-show">Show</button></form>
-                <form method="get" action="/ideas/<%= idea._id%>/edit"><button class="btn-edit">edit</button></form>
-                <form method="post" action="/ideas/<%= idea._id%>?_method=delete"><button class="btn-delete">delete</button></form>
+                <form method="get" action="/ideas/<%= idea._id%>"><button class="btn show-btn">Show</button></form>
+                <form method="get" action="/ideas/<%= idea._id%>/edit"><button class="btn edit-btn">edit</button></form>
+                <form method="post" action="/ideas/<%= idea._id%>?_method=delete"><button class="btn delete-btn">delete</button></form>
             </div>
         </div>
     <%}%>
