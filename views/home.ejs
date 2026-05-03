@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <div class="navbar">
-        <h1>Idea App</h1>
-        <form method="get" action="/ideas/new">
-            <button class="create-btn">+ Add Idea</button>
-        </form>
-    </div>
-    <%for(let idea of ideas){%>
-        <div class="idea">
-            <h3>Author: <b><%= idea.author%></b></h3>
-            <p class="idea-title">Title: <b><%= idea.title%></b></p>
-            <div class="description">
+<% layout("/layouts/boilerplate.ejs") %>
+
+<%for(let idea of ideas){%>
+    <div class="idea">
+        <h3>Author: <b><%= idea.author%></b></h3>
+        <p class="idea-title">Title: <b><%= idea.title%></b></p>
+        <div class="description">
                 <p><b>description:</b> <%= idea.description%></p>
-            </div>
-            <div class="button">
-                <form method="get" action="/ideas/<%= idea._id%>"><button class="btn show-btn">Show</button></form>
-                <form method="get" action="/ideas/<%= idea._id%>/edit"><button class="btn edit-btn">edit</button></form>
-                <form method="post" action="/ideas/<%= idea._id%>?_method=delete"><button class="btn delete-btn">delete</button></form>
-            </div>
         </div>
-    <%}%>
-</body>
-</html>
+        <div class="button">
+            <form method="get" action="/ideas/<%= idea._id%>"><button class="btn show-btn">Show</button></form>
+            <form method="get" action="/ideas/<%= idea._id%>/edit"><button class="btn edit-btn">edit</button></form>
+            <form method="post" action="/ideas/<%= idea._id%>?_method=delete"><button class="btn delete-btn">delete</button></form>
+        </div>
+    </div>
+<%}%>
