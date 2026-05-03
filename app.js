@@ -11,6 +11,9 @@ app.set("views",path.join(__dirname,"views"));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({extended:true}));
+// ejs mate require & use
+const ejsMate=require("ejs-mate");
+app.engine("ejs",ejsMate);
 
 
 
