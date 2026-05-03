@@ -88,9 +88,9 @@ body{
 
 
 /* delete btn */
-.btn-delete{
-    background: #fff5f5;
-    color: #c53030;
+.delete-btn{
+    background: #ffebee;
+    color: #c62828;
 }
 
 /* Author line */
