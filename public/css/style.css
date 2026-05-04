@@ -21,6 +21,11 @@ body{
     transform: scale(1.01);
     transition: 0.2s;
 }
+.idea-overlay{
+    text-decoration: none;
+    color: inherit;
+
+}
 
 /* TEXT */
 h3{
