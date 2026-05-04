@@ -200,3 +200,13 @@ h1{
 .f-info-links a:hover{
     text-decoration: underline;
 }
+
+.f-info-socials,.f-info-links,.f-info-brand{
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
