@@ -16,7 +16,7 @@ body{
 
 /* logo design */
 .fa-solid{
-    color: #ffc107;
+    color: #ffc107 !important;
     font-size: 22px;
     margin-right: 6px;
 }
@@ -24,6 +24,10 @@ body{
 /* sparknest text style */
 .nav-text{
     color: #6a1b9a;
+}
+
+.nav-text{
+    padding: 1rem;
 }
 
 /* IDEA CARD */
