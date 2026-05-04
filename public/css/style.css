@@ -178,3 +178,15 @@ h1{
     color: #6a1b9a;
     padding: 1rem;
 }
+
+
+/* footer */
+.f-info{
+    text-align: center;
+    background-color: #ebebeb;
+    height:  8rem;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: space-evenly; */
+}
