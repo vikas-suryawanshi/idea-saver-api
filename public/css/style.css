@@ -17,6 +17,8 @@ body{
 /* logo design */
 .fa-solid{
     color: #ffc107;
+    font-size: 22px;
+    margin-right: 6px;
 }
 
 /* IDEA CARD */
