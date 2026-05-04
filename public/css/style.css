@@ -21,6 +21,11 @@ body{
     margin-right: 6px;
 }
 
+/* sparknest text style */
+.nav-text{
+    color: #6a1b9a;
+}
+
 /* IDEA CARD */
 .idea{
     background-color: #ffffff;
