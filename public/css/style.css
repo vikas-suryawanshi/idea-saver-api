@@ -110,20 +110,6 @@ textarea{
     resize: none;
 }
 
-/* NEW FORM BUTTON */
-.new button{
-    display: block;
-    margin: 0 auto;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.new button:hover{
-    background-color: darkgreen;
-}
-
 /* EDIT BUTTON */
 .edit button{
     border: none;
@@ -140,27 +126,9 @@ h1{
     font-size: 28px;
 }
 
-/* back button */
-.home-btn{
-    display: inline-block;
-    margin: 10px 20px;
-    padding: 8px 14px;
-    background: #6a1b9a;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s;
-}
-
-.home-btn:hover{
-    background-color: #1a202c;
-    transform: translateX(-2px);
-}
-
-
 /* navbar */
 .navbar{
+    margin-bottom: 2rem;
     height: 5rem;
     background-color: white !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
