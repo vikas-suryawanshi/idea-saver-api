@@ -17,6 +17,7 @@ app.engine("ejs",ejsMate);
 // reuire expresserror handling class
 const ExpressError=require("./utils/ExpressError.js");
 const ExpressError=require("./utils/wrapAsync.js");
+const wrapAsync = require("./utils/wrapAsync.js");
 
 
 
@@ -78,12 +79,15 @@ res.redirect("/ideas");
 
 
 // show route 
-app.get("/ideas/:id",async(req,res)=>{
+app.get("/ideas/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let idea=await Idea.findById(id);
+    if(!idea){
+        throw new ExpressError(404,"idea is not found");
+    }
     res.render("show.ejs",{idea});
 
-})
+}));
 
 // edit route for serve form
 app.get("/ideas/:id/edit",async(req,res)=>{
