@@ -49,10 +49,10 @@ async function main() {
 
 
 // index route
-app.get("/ideas",async(req,res)=>{
+app.get("/ideas",wrapAsync(async(req,res)=>{
     let ideas=await Idea.find();
     res.render("home.ejs",{ideas});
-});
+}));
 
 // new get route
 app.get("/ideas/new",(req,res)=>{
@@ -60,7 +60,7 @@ app.get("/ideas/new",(req,res)=>{
 })
 
 // post route for add
-app.post("/ideas",(req,res)=>{
+app.post("/ideas",wrapAsync(async(req,res)=>{
     let {author,title,description}=req.body;
     let idea=new Idea({
         author:author,
@@ -68,13 +68,13 @@ app.post("/ideas",(req,res)=>{
         description:description,
         createdAt:Date.now(),
     });
-    idea.save().then((data)=>{
+    await idea.save().then((data)=>{
         console.log(data);
     }).catch((err)=>{
         console.log(err);
 })
 res.redirect("/ideas");
-})
+}));
 
 
 // show route 
@@ -89,28 +89,28 @@ app.get("/ideas/:id",wrapAsync(async(req,res)=>{
 }));
 
 // edit route for serve form
-app.get("/ideas/:id/edit",async(req,res)=>{
+app.get("/ideas/:id/edit",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let idea= await Idea.findById(id);
     res.render("edit.ejs",{idea});
-})
+}));
 
 
 // update route for update description
-app.put("/ideas/:id",async(req,res)=>{
+app.put("/ideas/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let {description:newdescription}=req.body;
     let idea=await Idea.findByIdAndUpdate(id,{description:newdescription});
     res.redirect("/ideas");
-})
+}));
 
 
 // delete for delete a idea
-app.delete("/ideas/:id",async(req,res)=>{
+app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let idea= await Idea.findByIdAndDelete(id);
     res.redirect("/ideas");
-})
+}));
 
 app.get("/",(req,res)=>{
     res.send("server is working");
