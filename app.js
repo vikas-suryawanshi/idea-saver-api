@@ -80,6 +80,9 @@ res.redirect("/ideas");
 // show route 
 app.get("/ideas/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        throw new ExpressError(404,"invalid id");
+    }
     let idea=await Idea.findById(id);
     if(!idea){
         throw new ExpressError(404,"idea is not found");
