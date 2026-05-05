@@ -14,6 +14,8 @@ app.use(express.urlencoded({extended:true}));
 // ejs mate require & use
 const ejsMate=require("ejs-mate");
 app.engine("ejs",ejsMate);
+// reuire expresserror handling class
+const ExpressError=require("./utils/ExpressError.js");
 
 
 
