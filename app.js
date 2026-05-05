@@ -16,7 +16,6 @@ const ejsMate=require("ejs-mate");
 app.engine("ejs",ejsMate);
 // reuire expresserror handling class
 const ExpressError=require("./utils/ExpressError.js");
-const ExpressError=require("./utils/wrapAsync.js");
 const wrapAsync = require("./utils/wrapAsync.js");
 
 
