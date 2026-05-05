@@ -113,6 +113,14 @@ app.get("/",(req,res)=>{
     res.send("server is working");
 })
 
+// global middleware define
+app.use((err,req,res,next)=>{
+    let {status=500,message="something went wrong"}=err;
+    res.status(status).send(message);
+});
+
+
+
 app.listen(port,()=>{
     console.log("port is listening on 8080");
 })
