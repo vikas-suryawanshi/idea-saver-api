@@ -5,7 +5,12 @@
             <h3>Edit your info: <b><%= idea.author%></b></h3>
             <p><strong>Title:</strong> <%= idea.title%></p>
             <br/>
-            <textarea type="text" class="form-control" name="description" id="description" rows="6" required><%= idea.description%></textarea>
+            <textarea type="text" class="form-control" 
+            name="description" id="description" rows="6" required>
+            <%= idea.description%></textarea>
+            <div class="invalid-feedback">
+                Please enter a valid description.
+            </div>
             <br/>
             <br/>
                 <button type="submit" class="btn btn-warning">Update</button>
