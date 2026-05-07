@@ -2,11 +2,12 @@
     <div class="new">
         <h3><b>Add your thinking</b></h3>
         <form method="post" action="/ideas">
-        <input name="author" placeholder="enter author">
+        <input name="author" placeholder="enter author" required>
         <br/> <br/>
-        <input name="title" placeholder="enter title">
+        <input name="title" placeholder="enter title" required>
         <br/> <br/>
-        <textarea name="description" placeholder="enter your idea" rows="7" cols="20"></textarea>
+        <textarea name="description" placeholder="enter your idea"
+        rows="7" cols="20" required></textarea>
         <br/> <br/>
         <button type="submit" class="btn btn-success">Add</button>
     </form>
