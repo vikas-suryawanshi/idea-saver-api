@@ -2,13 +2,21 @@
     <div class="new">
         <h3><b>Add your thinking</b></h3>
         <form method="post" action="/ideas" novalidate class="needs-validation">
-        <input name="author" placeholder="enter author" required>
-        <br/> <br/>
-        <input name="title" placeholder="enter title" required>
-        <br/> <br/>
-        <textarea name="description" placeholder="enter your idea"
-        rows="7" cols="20" required></textarea>
-        <br/> <br/>
-        <button type="submit" class="btn btn-success">Add</button>
-    </form>
+
+            <input name="author" placeholder="enter author" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+            </br>
+            <input name="title" placeholder="enter title" required>
+            <div class="invalid-feedback">
+                Title must be at least 3 characters.
+            </div>
+            <br/> <br/>
+            <textarea name="description" placeholder="enter your idea"
+            rows="7" cols="20" required></textarea>
+            <div class="invalid-feedback">
+                Please describe your idea properly.
+            </div>
+            <br/> <br/>
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
     </div>
