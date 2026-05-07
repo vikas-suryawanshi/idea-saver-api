@@ -128,7 +128,7 @@ app.use((req,res,next)=>{
 // global middleware define
 app.use((err,req,res,next)=>{
     let {status=500,message="something went wrong"}=err;
-    res.status(status).send(message);
+    res.status(status).render("error.ejs",{message});
 });
 
 
