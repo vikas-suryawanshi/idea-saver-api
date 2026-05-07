@@ -119,6 +119,12 @@ app.get("/",(req,res)=>{
     res.send("server is working");
 })
 
+// page not found middleware
+app.use((req,res,next)=>{
+    next(new ExpressError(404,"page not found"));
+})
+
+
 // global middleware define
 app.use((err,req,res,next)=>{
     let {status=500,message="something went wrong"}=err;
