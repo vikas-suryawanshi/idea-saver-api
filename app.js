@@ -49,6 +49,15 @@ async function main() {
 //     console.log(err);
 // })
 
+// validation schema middlewares
+const validateIdea=(req,res,next)=>{
+    let {error}=ideaSchema.validate(req.body);
+    if(error){
+        let errMsg=error.details.map((el)=>el.message).join(",");
+        throw new ExpressError(400,errMsg);
+    };
+};
+
 
 // index route
 app.get("/ideas",wrapAsync(async(req,res)=>{
