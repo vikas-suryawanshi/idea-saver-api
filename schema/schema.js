@@ -1,5 +1,6 @@
 const joi=require("joi");
 
+// for crete form schema
 module.exports.ideaSchema=joi.object({
         author:joi.string().required(),
         title:joi.string().required(),
