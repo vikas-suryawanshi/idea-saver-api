@@ -76,6 +76,7 @@ h3 b{
 
 /* FORM (NEW + EDIT COMMON) */
 .new, .edit{
+    text-align: end;
     width: 45%;
     margin: 40px auto;
     background-color: white;
