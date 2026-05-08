@@ -50,8 +50,17 @@ async function main() {
 //     console.log(err);
 // })
 
-// validation schema middlewares
+// new form validation schema middlewares
 const validateIdea=(req,res,next)=>{
+    let {error}=ideaSchema.validate(req.body);
+    if(error){
+        let errMsg=error.details.map((el)=>el.message).join(",");
+        throw new ExpressError(400,errMsg);
+    };
+};
+
+// update validation middleware
+const validateUpdateIdea=(req,res,next)=>{
     let {error}=ideaSchema.validate(req.body);
     if(error){
         let errMsg=error.details.map((el)=>el.message).join(",");
@@ -112,7 +121,7 @@ app.get("/ideas/:id/edit",wrapAsync(async(req,res)=>{
 
 
 // update route for update description
-app.put("/ideas/:id",validateIdea,wrapAsync(async(req,res)=>{
+app.put("/ideas/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let {description:newdescription}=req.body;
     let idea=await Idea.findByIdAndUpdate(id,{description:newdescription});
