@@ -5,3 +5,8 @@ module.exports.ideaSchema=joi.object({
         title:joi.string().required(),
         description:joi.string().required().min(3),
 });
+
+// for edit form validation schema
+module.exports.updateIdeaSchema=joi.object({
+    description:joi.string().required().min(3),
+});
