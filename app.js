@@ -57,6 +57,7 @@ const validateIdea=(req,res,next)=>{
         let errMsg=error.details.map((el)=>el.message).join(",");
         throw new ExpressError(400,errMsg);
     };
+    next();
 };
 
 // update validation middleware
@@ -66,6 +67,7 @@ const validateUpdateIdea=(req,res,next)=>{
         let errMsg=error.details.map((el)=>el.message).join(",");
         throw new ExpressError(400,errMsg);
     };
+    next();
 };
 
 
