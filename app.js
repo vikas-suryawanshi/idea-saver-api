@@ -61,7 +61,7 @@ const validateIdea=(req,res,next)=>{
 
 // update validation middleware
 const validateUpdateIdea=(req,res,next)=>{
-    let {error}=ideaSchema.validate(req.body);
+    let {error}=updateIdeaSchema.validate(req.body);
     if(error){
         let errMsg=error.details.map((el)=>el.message).join(",");
         throw new ExpressError(400,errMsg);
