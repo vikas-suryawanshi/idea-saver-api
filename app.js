@@ -71,7 +71,7 @@ app.get("/ideas/new",(req,res)=>{
 })
 
 // post route for add
-app.post("/ideas",wrapAsync(async(req,res)=>{
+app.post("/ideas",validateIdea,wrapAsync(async(req,res)=>{
     let {author,title,description}=req.body;
     let idea=new Idea({
         author:author,
@@ -103,7 +103,7 @@ app.get("/ideas/:id",wrapAsync(async(req,res)=>{
 }));
 
 // edit route for serve form
-app.get("/ideas/:id/edit",wrapAsync(async(req,res)=>{
+app.get("/ideas/:id/edit",validateIdea,wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let idea= await Idea.findById(id);
     res.render("edit.ejs",{idea});
