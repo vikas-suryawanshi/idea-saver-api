@@ -21,6 +21,10 @@ const ideaSchema=new mongoose.Schema({
         type:Number,
         default:0,
     },
+    reviews:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Review",
+    }
 });
 
 const idea= mongoose.model("idea",ideaSchema);
