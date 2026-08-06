@@ -144,6 +144,10 @@ app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
 app.post("/ideas/:id/reviews",async(req,res)=>{
     let ideas=await Idea.findById(req.params.id);
     let newReview= new Review(req.body.review);
+
+    ideas.reviews.push(newReview);
+    await newReview.save();
+    await ideas.save();
 })
 
 app.get("/",(req,res)=>{
