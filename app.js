@@ -141,7 +141,7 @@ app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
 
 // reviews post route
 app.post("/ideas/:id/reviews",async(req,res)=>{
-    
+    let ideas=await Idea.findById(req.params.id);
 })
 
 app.get("/",(req,res)=>{
