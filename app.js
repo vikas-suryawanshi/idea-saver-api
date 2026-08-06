@@ -148,7 +148,7 @@ app.post("/ideas/:id/reviews",async(req,res)=>{
     ideas.reviews.push(newReview);
     await newReview.save();
     await ideas.save();
-    res.redirect(`/ideas/${_id}`);
+    res.redirect(`/ideas/${id}`);
 })
 
 app.get("/",(req,res)=>{
