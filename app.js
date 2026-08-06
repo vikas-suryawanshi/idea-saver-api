@@ -138,6 +138,12 @@ app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
     res.redirect("/ideas");
 }));
 
+
+// reviews post route
+app.post("/ideas/:id/reviews",async(req,res)=>{
+    
+})
+
 app.get("/",(req,res)=>{
     res.send("server is working");
 })
