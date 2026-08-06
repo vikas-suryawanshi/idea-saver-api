@@ -5,6 +5,7 @@ const mongoose=require("mongoose");
 const methodOverride=require("method-override");
 const { create } = require("./models/idea");
 const Idea=require("./models/idea.js");
+const Review=require("./models/review.js");
 const path=require("path")
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
@@ -142,6 +143,7 @@ app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
 // reviews post route
 app.post("/ideas/:id/reviews",async(req,res)=>{
     let ideas=await Idea.findById(req.params.id);
+    let newReview= new Review(req.body.review);
 })
 
 app.get("/",(req,res)=>{
