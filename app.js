@@ -36,21 +36,6 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/ideas');
 }
 
-// // initalize one 
-// idea1=new Idea({
-//     author:"vikas",
-//     title:"ai interview platform",
-//     description:"it is require to indian students",
-//     likes:80,
-
-// });
-
-// idea1.save().then((data)=>{
-//     console.log(data);
-// }).catch((err)=>{
-//     console.log(err);
-// })
-
 // new form validation schema middlewares
 const validateIdea=(req,res,next)=>{
     let {error}=ideaSchema.validate(req.body);
