@@ -11,3 +11,10 @@ module.exports.ideaSchema=joi.object({
 module.exports.updateIdeaSchema=joi.object({
     description:joi.string().required().min(3),
 });
+
+module.exports.reviewSchema = Joi.object({
+  review: Joi.object({
+    rating: Joi.number().required().min(1).max(5),
+    comment: Joi.string().required(),
+  }).required(),
+});
