@@ -135,7 +135,7 @@ app.delete("/ideas/:id",wrapAsync(async(req,res)=>{
 
 
 // reviews post route
-app.post("/ideas/:id/reviews",async(req,res)=>{
+app.post("/ideas/:id/reviews",validateReview,wrapAsync(async(req,res)=>{
     let ideas=await Idea.findById(req.params.id);
     let newReview= new Review(req.body.review);
 
@@ -143,7 +143,7 @@ app.post("/ideas/:id/reviews",async(req,res)=>{
     await newReview.save();
     await ideas.save();
     res.redirect(`/ideas/${req.params.id}`);
-})
+}))
 
 app.get("/",(req,res)=>{
     res.send("server is working");
