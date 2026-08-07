@@ -19,7 +19,7 @@ app.engine("ejs",ejsMate);
 const ExpressError=require("./utils/ExpressError.js");
 const wrapAsync = require("./utils/wrapAsync.js");
 // require schema validation files
-const {ideaSchema} =require("./schema/schema.js");
+const {ideaSchema,reviewSchema} =require("./schema/schema.js");
 const {updateIdeaSchema} = require("./schema/schema.js");
 
 
